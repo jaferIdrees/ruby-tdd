@@ -28,7 +28,7 @@ describe Solver do
     solver = Solver.new
 
     it 'should return the reverse of a string' do
-      expect (solver.reverse('hello')).to eq 'olleh'
+      expect(solver.reverse('hello')).to eq 'olleh'
     end
   end
 end
