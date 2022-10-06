@@ -31,4 +31,20 @@ describe Solver do
       expect(solver.reverse('hello')).to eq 'olleh'
     end
   end
+
+  context 'Test fizzbuzz method' do
+    solver = Solver.new
+
+    it 'should return fizz when N is divisible by 3' do
+      expect(solver.fizzbuzz(6)).to eq 'fizz'
+    end
+
+    it 'should return buzz when N is divisible by 5' do
+      expect(solver.fizzbuzz(10)).to eq 'buzz'
+    end
+
+    it 'should return fizzbuzz when N is divisible by 3 and 5' do
+      expect(solver.fizzbuzz(15).to eq 'fizzbuzz')
+    end
+  end
 end
