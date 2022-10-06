@@ -7,4 +7,5 @@ class Solver
 
     return num * factorial(num-1)
   end
+
 end
