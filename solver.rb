@@ -1,11 +1,11 @@
 class Solver
   def factorial(num)
-    raise StandardError.new 'Negative number recieved' if num < 0
-    raise StandardError.new 'Non-integer number passed' unless num.integer?
+    raise StandardError, 'Negative number recieved' if num.negative?
+    raise StandardError, 'Non-integer number passed' unless num.integer?
 
-    return 1 if num == 0 || num == 1
+    return 1 if [0, 1].include?(num)
 
-    num * factorial(num-1)
+    num * factorial(num - 1)
   end
 
   def reverse(string)
@@ -13,11 +13,9 @@ class Solver
   end
 
   def fizzbuzz(num)
-
-    return 'fizzbuzz' if (num % 3 == 0 && num % 5 == 0)
+    return 'fizzbuzz' if (num % 3).zero? && (num % 5).zero?
     return 'fizz' if (num % 3).zero?
-    'buzz' if (num % 5).zero?
 
+    'buzz' if (num % 5).zero?
   end
 end
-
